@@ -1,0 +1,82 @@
+{
+  "username" : "root",
+  "password" : "7b6a43524a2621157e686d791a50777e47367b6a3120",
+  "url" : "jdbc:mysql://ec2-54-87-2-36.compute-1.amazonaws.com:3306/classicmodels?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "classicmodels",
+  "packageName" : "com.test_vcs123.classicmodels",
+  "dbType" : "MySQL",
+  "host" : "ec2-54-87-2-36.compute-1.amazonaws.com",
+  "dbName" : "classicmodels",
+  "port" : "3306",
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "article_tags",
+    "schema" : null
+  }, {
+    "table" : "article_tagssx",
+    "schema" : null
+  }, {
+    "table" : "customers",
+    "schema" : null
+  }, {
+    "table" : "employees",
+    "schema" : null
+  }, {
+    "table" : "identityTest",
+    "schema" : null
+  }, {
+    "table" : "mytable",
+    "schema" : null
+  }, {
+    "table" : "mytable2",
+    "schema" : null
+  }, {
+    "table" : "offices",
+    "schema" : null
+  }, {
+    "table" : "orderdetails",
+    "schema" : null
+  }, {
+    "table" : "orders",
+    "schema" : null
+  }, {
+    "table" : "payments",
+    "schema" : null
+  }, {
+    "table" : "productlines",
+    "schema" : null
+  }, {
+    "table" : "products",
+    "schema" : null
+  }, {
+    "table" : "TABLE11",
+    "schema" : null
+  }, {
+    "table" : "TABLE13",
+    "schema" : null
+  }, {
+    "table" : "TempTimeCheck",
+    "schema" : null
+  }, {
+    "table" : "user",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}

@@ -3,7 +3,51 @@
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="8" name="mainContent" padding="unset 15px">
+            <wm-label padding="unset 0.5em" name="label1" caption="bind:Variables.Javaserv1.dataSet.value"></wm-label>
+            <wm-livetable name="ProductlinesLiveTable1">
+                <wm-table gridfirstrowselect="true" editmode="form" name="ProductlinesTable1" title="Productlines List" dataset="bind:Variables.ClassicmodelsProductlinesData.dataSet" navigation="Basic">
+                    <wm-table-column binding="productLine" caption="Product Line" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" primary-key="true"></wm-table-column>
+                    <wm-table-column binding="textDescriptio" caption="Text Descriptio" generator="assigned" pcdisplay="true" mobiledisplay="true" type="text"></wm-table-column>
+                    <wm-table-column binding="htmlDescription" caption="Html Description" generator="assigned" pcdisplay="true" mobiledisplay="true" type="text"></wm-table-column>
+                    <wm-table-column binding="image" widget-type="anchor" caption="Image" generator="assigned" pcdisplay="true" mobiledisplay="true" type="blob">
+                        <wm-anchor caption="" hyperlink="bind:row.getProperty('image')" target="_blank" iconclass="wm-icon wm-icon24 wi wi-file" class="col-md-9" show="bind:row.getProperty('image')!= null"></wm-anchor>
+                    </wm-table-column>
+                    <wm-table-column binding="textDescription" caption="Text Description" generator="assigned" pcdisplay="true" mobiledisplay="true" type="text"></wm-table-column>
+                    <wm-table-action widget-type="button" key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action>
+                    <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action>
+                    <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action>
+                </wm-table>
+                <wm-liveform errormessage="" title="Productlines Info" formlayout="inline" iconclass="wi wi-edit" name="ProductlinesLiveForm1" dataset="bind:Variables.ClassicmodelsProductlinesData.dataSet" captionalign="left" captionposition="top">
+                    <wm-layoutgrid columns="3" name="layoutgrid1">
+                        <wm-gridrow name="gridrow1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                                <wm-form-field name="productLine" displayname="Product Line" required="true" show="true" generator="assigned" primary-key="true" key="productLine" type="string" is-related="false" maxchars="50" pc-display="true" mobile-display="true"
+                                    widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn2">
+                                <wm-form-field name="textDescriptio" displayname="Text Descriptio" required="false" show="true" generator="assigned" primary-key="false" key="textDescriptio" type="text" is-related="false" maxchars="4000" pc-display="true"
+                                    mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                                <wm-form-field name="htmlDescription" displayname="Html Description" required="false" show="true" generator="assigned" primary-key="false" key="htmlDescription" type="text" is-related="false" maxchars="16777215" pc-display="true"
+                                    mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow2">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                                <wm-form-field name="image" displayname="Image" required="false" show="true" generator="assigned" primary-key="false" key="image" type="blob" is-related="false" maxchars="16777215" pc-display="true" mobile-display="true" widget="upload"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn5">
+                                <wm-form-field name="textDescription" displayname="Text Description" required="false" show="true" generator="assigned" primary-key="false" key="textDescription" type="text" is-related="false" maxchars="4000" pc-display="true"
+                                    mobile-display="true" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livetable>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
